@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tip a Staff Member</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Venue Screen -->
+  <div id="venueScreen" class="screen">
+    <h1>Select Your Venue</h1>
+    <div class="grid">
+      <button class="venue-btn" onclick="showScreen('staffScreen')">The Gateway Hotel</button>
+      <button class="venue-btn" onclick="showScreen('staffScreen')">The Lalit Ashok</button>
+      <button class="venue-btn" onclick="showScreen('staffScreen')">ITC Windsor</button>
+      <button class="venue-btn" onclick="showScreen('staffScreen')">Taj Residency</button>
+      <button class="venue-btn" onclick="showScreen('staffScreen')">Golden Palm Hotel & Spa</button>
+      <button class="venue-btn" onclick="showScreen('staffScreen')">Hotel Royal Orchid</button>
+    </div>
+  </div>
+
+  <!-- Staff Selection -->
+  <div id="staffScreen" class="screen hidden">
+    <h1>Select a Staff Member</h1>
+    <div id="staffList" class="staff-list"></div>
+  </div>
+
+  <!-- Tip Screen -->
+  <div id="tipScreen" class="screen hidden">
+    <h1>Tip Your Favorite Staff</h1>
+    <div id="tipProfile" class="tip-info"></div>
+    <img id="qrCode" class="qr" />
+    <br />
+    <button onclick="showScreen('staffScreen')">BACK</button>
+    <button onclick="showScreen('ratingScreen')">NEXT</button>
+  </div>
+
+  <!-- Rating Screen -->
+  <div id="ratingScreen" class="screen hidden">
+    <h1>Rate Your Experience</h1>
+    <div class="emoji">😡 😐 🙂 😄 😍</div>
+    <div class="stars">★ ★ ★ ★ ★</div>
+    <textarea id="comments" placeholder="Optional Comments Box"></textarea>
+    <button onclick="submitFeedback()">SUBMIT</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- Venue Screen -->
+<div id="venueScreen" class="screen">
+  <h1>Select Your Venue</h1>
+  <div class="grid">
+    <div class="venue-card" onclick="showScreen('staffScreen')">
+      <img src="https://source.unsplash.com/400x300/?restaurant,1" alt="Hotel 1">
+      <p>The Gateway Hotel</p>
+    </div>
+    <div class="venue-card" onclick="showScreen('staffScreen')">
+      <img src="https://source.unsplash.com/400x300/?restaurant,2" alt="Hotel 2">
+      <p>The Lalit Ashok</p>
+    </div>
+    <div class="venue-card" onclick="showScreen('staffScreen')">
+      <img src="https://source.unsplash.com/400x300/?restaurant,3" alt="Hotel 3">
+      <p>ITC Windsor</p>
+    </div>
+    <div class="venue-card" onclick="showScreen('staffScreen')">
+      <img src="https://source.unsplash.com/400x300/?restaurant,4" alt="Hotel 4">
+      <p>Taj Residency</p>
+    </div>
+    <div class="venue-card" onclick="showScreen('staffScreen')">
+      <img src="https://source.unsplash.com/400x300/?restaurant,5" alt="Hotel 5">
+      <p>Golden Palm Hotel & Spa</p>
+    </div>
+    <div class="venue-card" onclick="showScreen('staffScreen')">
+      <img src="https://source.unsplash.com/400x300/?restaurant,6" alt="Hotel 6">
+      <p>Hotel Royal Orchid</p>
+    </div>
+  </div>
+</div>
